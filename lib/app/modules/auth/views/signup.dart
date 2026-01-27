@@ -90,7 +90,7 @@ class SignUpPage extends StatelessWidget {
                     CustomButton(
                       title: "Sign Up",
                       onPress: () async{},
-                      borderColor: Colors.transparent,
+                      borderColor: AppColor.brightGreen,
                       buttonColor: AppColor.brightGreen,
                       textColor: AppColor.black111214,
                       fontSize: 14.sp,

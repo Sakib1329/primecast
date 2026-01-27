@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
     this.borderColor = AppColor.deepForestGreen,
     this.borderShadowColor = const Color(0x1E000000),
     this.arrowicon = false,
-    this.trailing = ImageAssets.svg1,
+    this.trailing = ImageAssets.svg10,
     this.svgorimage = false,
     this.height = 55,
     this.imageHeight = 25,
@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
     this.icon = false,
     this.leadingSvg = false,
     this.leadingSvgPath = '',
-    this.image = ImageAssets.fb,
+    this.image = ImageAssets.img,
     this.fontSize = 14,
     this.fontWeight = FontWeight.w700,
     this.fontFamily = 'WorkSans',
@@ -94,7 +94,7 @@ class CustomButton extends StatelessWidget {
           border: Border.all(color: borderColor, width: 2.w),
           boxShadow: [
             BoxShadow(
-              color:AppColor.brightGreen,
+              color:borderColor,
               blurRadius: 8.r,
               spreadRadius: 1.r,
               offset: Offset(0, 2.h),
@@ -123,8 +123,8 @@ class CustomButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          if (icon) _leadingWidget(),
-          if (icon) SizedBox(width: 8.w),
+          if (leadingSvg) _leadingWidget(),
+          if (leadingSvg) SizedBox(width:12.w),
           Text(
             title,
             style: textGradient != null
@@ -200,7 +200,7 @@ class CustomButton extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        if (icon) _leadingWidget(),
+        if (leadingSvg) _leadingWidget(),
         if (icon) SizedBox(width: 12.w),
         Expanded(
           child: Column(

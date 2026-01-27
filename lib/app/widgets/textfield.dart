@@ -203,7 +203,7 @@ class _InputTextWidgetState extends State<InputTextWidget> {
                         : widget.passwordIcon,
                     width: widget.obscureWidth,
                     height: widget.obscureHeigth,
-                    color: AppColor.deepForestGreen,
+                    color: AppColor.pureWhite,
 
                   ),
                 ),

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:primecast/app/modules/auth/views/reset_password.dart';
 import 'package:primecast/app/modules/auth/views/signup.dart';
+import 'package:primecast/app/modules/auth/views/subscription.dart';
 import '../../../res/assets/asset.dart';
 import '../../../res/colors/colors.dart';
 import '../../../res/fonts/fonts.dart';
@@ -102,7 +104,9 @@ class LoginPage extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.off(ResetPasswordMainPage(),transition:Transition.rightToLeft);
+                    },
                     child: Text(
                       "Forgot Password?",
                       style: TextStyle(color: AppColor.brightGreen),
@@ -120,8 +124,11 @@ class LoginPage extends StatelessWidget {
                   children: [
                     CustomButton(
                       title: "Sign In",
-                      onPress: () async {},
-                      borderColor: Colors.transparent,
+                      onPress: () async {
+                        Get.off(PremiumSubscriptionPage(),transition: Transition.rightToLeft);
+                      },
+
+                      borderColor: AppColor.brightGreen,
                       buttonColor: AppColor.brightGreen,
                       textColor: AppColor.black111214,
                       fontSize: 14.sp,
