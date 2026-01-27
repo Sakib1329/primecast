@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:primecast/app/modules/home/controllers/home_controller.dart';
 
 import 'app/modules/onboard/controllers/onboarding_controller.dart';
 import 'app/modules/onboard/views/splash_view.dart';
@@ -24,6 +25,7 @@ void main() async {
 
   Get.put(OnboardController());
 
+  Get.put(Homecontroller());
 
   runApp(const MyApp());
 }
@@ -50,10 +52,10 @@ class MyApp extends StatelessWidget {
             title: "Application",
             home: SplashScreen(),
             theme: ThemeData(
-              scaffoldBackgroundColor:   AppColor.black111214,
+              scaffoldBackgroundColor:   AppColor.deepForestGreen,
               appBarTheme: const AppBarTheme(
                 elevation: 0,
-                backgroundColor:   AppColor.black111214,
+                backgroundColor:   AppColor.deepForestGreen,
                 scrolledUnderElevation: 0,
               ),
             ),

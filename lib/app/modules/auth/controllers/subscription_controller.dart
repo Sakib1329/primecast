@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:primecast/app/modules/home/view/navbar.dart';
 
 class SubscriptionController extends GetxController {
   void startTrial() {
@@ -7,6 +8,6 @@ class SubscriptionController extends GetxController {
   }
 
   void skip() {
-    Get.offAllNamed('/home');
+  Get.offAll(GoogleNavBarPage(),transition: Transition.rightToLeft);
   }
 }
