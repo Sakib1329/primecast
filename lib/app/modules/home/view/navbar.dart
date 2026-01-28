@@ -28,9 +28,9 @@ class GoogleNavBarPage extends StatelessWidget {
               controller: controller.pageController,
               physics: const NeverScrollableScrollPhysics(),
               children: [
-                Homepage(),
+                HomeScreen(),
                 SearchPage(),
-                MusicPage(),
+                MusicHomePage(),
                NotificationPage(),
                 const SettingsPage(),
 

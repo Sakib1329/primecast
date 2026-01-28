@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:primecast/app/modules/settings/views/legal_information.dart';
 
 import '../../../res/assets/asset.dart';
 import '../../../res/colors/colors.dart';
@@ -61,14 +62,16 @@ class PremiumSubscriptionPage extends StatelessWidget {
                 child: Text("Skip for now",
                     style: AppTextStyles.arimoRegular.copyWith(
                         color: AppColor.coolGray,
-                        fontSize: 16.sp
+                        fontSize: 16.sp,
+                      decoration: TextDecoration.underline,
+                      decorationColor: AppColor.coolGray
                     )),
               ),
 
               SizedBox(height: 20.h),
 
               Text(
-                "Your subscription will automatically renew at \$3.99/month after the first month unless you cancel. You can cancel anytime in your account settings.",
+                "Your subscription will automatically renew at \$3.99/month after the first month unless you cancel. You can cancel anytime in your account settings. By Continuing, you agree to our",
                 textAlign: TextAlign.center,
                 style: AppTextStyles.arimoRegular.copyWith(
                     color: AppColor.grayish,
@@ -76,7 +79,7 @@ class PremiumSubscriptionPage extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 10.h),
+              SizedBox(height: 5.h),
 
               _buildFooterLinks(),
               SizedBox(height: 40.h),
@@ -283,12 +286,19 @@ border: Border.all(color: AppColor.redBright30)
   Widget _buildFooterLinks() => Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      Text("Terms of Service",
-          style: AppTextStyles.arimoRegular.copyWith(
-              color: AppColor.coolGray,
-              fontSize: 12.sp,
-              decoration: TextDecoration.underline
-          )),
+      InkWell(
+        onTap: (){
+          Get.to(LegalPage(),transition: Transition.rightToLeft);
+        },
+
+        child: Text("Terms of Service",
+            style: AppTextStyles.arimoRegular.copyWith(
+                color: AppColor.coolGray,
+                fontSize: 12.sp,
+                decoration: TextDecoration.underline,
+                decorationColor: AppColor.coolGray
+            )),
+      ),
       Padding(
           padding: EdgeInsets.symmetric(horizontal: 8.w),
           child: Text("and", style: AppTextStyles.arimoRegular.copyWith(
@@ -296,12 +306,18 @@ border: Border.all(color: AppColor.redBright30)
               fontSize: 12.sp
           ))
       ),
-      Text("Privacy Policy",
-          style: AppTextStyles.arimoRegular.copyWith(
-              color: AppColor.coolGray,
-              fontSize: 12.sp,
-              decoration: TextDecoration.underline
-          )),
+      InkWell(
+        onTap: (){
+          Get.to(LegalPage(),transition: Transition.rightToLeft);
+        },
+        child: Text("Privacy Policy",
+            style: AppTextStyles.arimoRegular.copyWith(
+                color: AppColor.coolGray,
+                fontSize: 12.sp,
+                decoration: TextDecoration.underline,
+              decorationColor: AppColor.coolGray
+            )),
+      ),
     ],
   );
 }

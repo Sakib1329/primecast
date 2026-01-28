@@ -7,7 +7,7 @@ import 'package:primecast/app/modules/settings/views/editprofile.dart';
 import 'package:primecast/app/modules/settings/views/legal_information.dart';
 import 'package:primecast/app/modules/settings/views/my_list.dart';
 import 'package:primecast/app/modules/settings/views/notification_settings.dart';
-import 'package:primecast/app/modules/settings/views/sybscription_status.dart';
+import 'package:primecast/app/modules/settings/views/subscription_status.dart';
 import 'package:primecast/app/modules/settings/views/watch_history.dart';
 
 import '../../../res/colors/colors.dart';

@@ -21,6 +21,7 @@ class AppColor {
   static const Color redBright30 = Color(0x4DFB2C36);   // #FB2C36 with 30% opacity
   static const Color redSoft = Color(0xFFFF6467);       // #FF6467
   static const Color greenTeal = Color(0xFF009966);
+  static const Color darkGray = Color(0xFF27272A);
 
 
 
